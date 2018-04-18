@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.example.babajidemustapha.remedy.MainActivity">
+    <item
+        android:id="@+id/action_profile"
+        android:orderInCategory="105"
+        android:title="Profile"
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/action_search"
+        android:icon="@drawable/ic_search_black_24dp"
+        android:orderInCategory="101"
+        android:title="Search"
+        app:actionViewClass="android.support.v7.widget.SearchView"
+        app:showAsAction="ifRoom|collapseActionView" />
+    <item
+        android:id="@+id/action_logout"
+        android:orderInCategory="1000"
+        android:title="Logout"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/action_group_by_month"
+        android:orderInCategory="100"
+        android:title="Month"
+        app:actionViewClass="android.widget.Spinner"
+        app:showAsAction="always" />
+
+</menu>
