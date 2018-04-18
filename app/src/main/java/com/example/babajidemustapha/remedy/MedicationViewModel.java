@@ -48,7 +48,15 @@ public class MedicationViewModel extends AndroidViewModel {
     }
 
     public void searchMed(String query, String month) {
-        medications.setValue(appDatabase.medicationDao().searchMed(query, MonthUtil.getMonthNumber(month)));
+        switch (month) {
+            case "ALL":
+                medications.setValue(appDatabase.medicationDao().searchMed(query));
+                break;
+            default:
+                medications.setValue(appDatabase.medicationDao().searchMed(query, MonthUtil.getMonthNumber(month)));
+                break;
+        }
+
     }
 
     public void deleteMed(Medication medication) {

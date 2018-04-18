@@ -47,4 +47,7 @@ public interface MedicationDao {
             "OR ((strftime('%Y',endDate) - strftime('%Y',startDate) > 1) AND (:month BETWEEN 1 AND 12))))")
     List<Medication> searchMed(String query, int month);
 
+    @Query("Select * FROM MEDICATION WHERE (name like '%'||:query||'%' OR description like  '%'||:query||'%')")
+    List<Medication> searchMed(String query);
+
 }
